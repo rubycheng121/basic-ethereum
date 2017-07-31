@@ -2,6 +2,12 @@ var solc = require('solc')
 var fs = require('fs')
 var path = require('path');
 
+
+/*
+or in terminal: 
+solcjs --optimize --bin -o ./Contract/ ./Contracts.sol
+solcjs --optimize --abi -o ./Contract/ ./Contracts.sol
+*/
 let input;
 fs.readFile(path.resolve(__dirname, './Contracts.sol'), (err, Data) => {
 
