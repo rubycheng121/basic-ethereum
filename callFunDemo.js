@@ -12,12 +12,12 @@ const web3 = new Web3(new Web3.providers.HttpProvider(provider))
 
 
 let contractName = 'myFirstContract'
-let myName = 'RubyCheng'
+let myName = 'PercomLab'
 
 const abi = JSON.parse(fs.readFileSync(path.resolve(__dirname, './Contract', ':' + contractName + '.json')))
 
-var MyContract = web3.eth.contract(abi);
-var myContractInstance;
+let MyContract = web3.eth.contract(abi);
+let myContractInstance;
 let myContractAddress;
 deploey(contractName, myName)
   .then(address => {
@@ -32,7 +32,7 @@ deploey(contractName, myName)
   })
   .then(() => {
 
-    myContractInstance.setNumber(100 ,{
+    myContractInstance.setNumber(999 ,{
       from: web3.eth.coinbase,
       gas: 44444444
     }, (err, txhash) => {
