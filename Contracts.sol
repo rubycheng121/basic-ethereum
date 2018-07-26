@@ -1,4 +1,4 @@
-pragma solidity ^0.4.8;
+pragma solidity ^0.4.22;
 
 contract myFirstContract {
     /* define variable */
@@ -6,21 +6,21 @@ contract myFirstContract {
     string myName;
 
     /* this runs when the contract is executed */
-    function myFirstContract(string name) public {
+    constructor(string name) public {
         myName = name;
     }
 
     /*  function */
-    function setNumber(int newNumber)  returns (bool) {
+    function setNumber(int newNumber) public returns (bool) {
         myNumber=newNumber;
         return true;
     }
 
-    function getMyName() constant returns (string) {
+    function getMyName() public constant returns (string) {
         return myName;
     }
 
-    function getNumber() constant returns (int) {
+    function getNumber() public constant returns (int) {
         return myNumber;
     }
 }
